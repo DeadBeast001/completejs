@@ -1,5 +1,4 @@
 console.log("heey");
-
 // const x=5;
 // const x=10;
 // console.log(x)    //{ gets error saying identifier x has been already declared
@@ -7,13 +6,13 @@ console.log("heey");
 // let x=10;
 //  x=7;
 // console.log(x);   // {here you can update vlaue reinitialize it but canot again use let use
-//0nly once}
+// // 0nly once}
 
-//  let x=true;
+//  let x=4;
 // console.log(typeof x)        //{you can check the data type of variable}
 // ------------------------------------
 // let name="prajwal"
-// let age=19;                              {dom manipultion is doen chenged the content}
+// let age=19;                             // {dom manipultion is doen chenged the content}
 // let isstudent=true;
 
 // let p1=document.querySelector("#p1");
@@ -162,16 +161,52 @@ console.log("heey");
 //  let food4="dddddddd"
 //  let  pood = foods(food1,food2,food3,food4)
 // exersise
+// Dice roller program
 // function rolldice(){
 // let numofdice=document.querySelector("#input").value;
-// values=[]
-// images=[]
+// let image=document.querySelector("#image")
+// let p=document.querySelector("#p1")
+// let value=[]
+// let images=[]
 // for(let i=1;i<=numofdice;i++){
-//   let value=Math.floor(Math.random()*6)+1;
-//   console.log(value);
-//   values.push(value)
-// images.push(`<img src="${value}.png" alt="dice ${value}">`)
-// }}
+//     let values=Math.floor(Math.random()*6)+1;
+//     console.log(values)
+//     value.push(values)
+//     images.push(`<img src="${values}.png" alt="">`)
+// }
+// p.textContent=`${value.join(" ")}`  //  text content is used to display only the textual content not images or videos
+// image.innerHTML=images.join('')
+ 
+// }
+// Password generator
+// math.random will not genearte last value specified fo use floor and+1 to include it
+// function
+// function a(b){
+//     return b*2
+// }
+// let e=3
+// let c=a(e)
+// console.log(c)
+// function using return
+// function a(uppercasechar,lowercasechar,symbolschar){
+         
+//         uppercasechar='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+//         lowercasechar='abcdefghijklmnopqrstuvwxyz'
+//         symbolschar='!@#$%^&*()_+~`><.,/?:;{}[]|'
+//     }
+//     let length=10
+//     let uppercase=true
+//     let lowercase=true
+//     let symbols=true
+
+//     let c=a(
+//         uppercase,
+//         lowercase,
+//         symbols,
+//     )
+//     console.log(c)
+
+
 // string objects
 // let a="                    Prajwalps manohara@gmail.com     "
 // console.log(a.charAt(5))     // return charcter at specified index
@@ -421,3 +456,209 @@ console.log("heey");
 //         }
 
 // }
+// const hello= ()=>{
+//     console.log("hello")
+// }
+// callback function is a function passed to another function as argument
+// function hurr(){
+//     let x=5;
+// }
+// hurr()
+// function hello(by){
+    
+//     setTimeout(()=>{
+//         console.log('heey jido')
+//         by()
+//     },3000)
+   
+// }
+// hello(bye)
+// function bye(){
+//     console.log("bye")
+// }
+
+// function sum (callback,x,y){
+//      let result =x+y
+//    callback(result)
+//     // console.log(result)
+// }
+
+// function calculate(result){
+//     console.log("ehh",result*3) // you can perform you own task inside funtion
+// }
+//  sum(calculate,2,4)
+
+
+
+// //  callback function
+// function fetch(callback,pagedisplay){
+//     let data={id:1,name:'sjsjc'}
+//     callback(data)
+//     pagedisplay(data)
+// }
+// function result(data){
+//     console.log(data)
+// }
+// function display(data){
+//     let p1 =document.querySelector('#p1')
+//     p1.textContent=data.id
+// }
+// fetch(result,display)
+// let a=[1,3,5,6,7]
+// a.forEach((m)=>{operation(m),double(m)})  // for each method doesnt accept double function forEach
+//                                           //  accepts a single callback function, so if you want to apply multiple functions
+//                                            // , you'll need to either combine them into one function or call them sequentially within the same callback.
+//     function double(m){
+//         console.log(m*2)
+//     }
+//     function operation(n){
+//     console.log(n*4)  // arguments are values that can perform several  task in several funcntion
+// }
+// you can also call it separately
+// let stud=["kejd","nejh"]
+// let newstd=stud.map(newstuds)
+// function newstuds(e){
+//   console.log( e.toUpperCase())
+// }
+// here the new changes applied will not effect the orign array so to effect the origin
+// insted of console use return and outside funct use console.log to print newstd
+// function newstuds(e){
+//   return ( e.toUpperCase())
+// }
+// console.log(newstd)
+// filter method
+// let number=[1,2,34,5,6,7,8]
+// // 1-st method
+// let newnum=number.filter((r)=>{
+//  return( r%2==0)
+// })
+// //2-Nd method
+// let newnum_1=number.filter(even) 
+// let newnum_2=number.filter(odd)
+
+// console.log(newnum_1)
+// console.log(newnum_2)
+
+//  function even(ev){
+//       return ev%2==0
+//  }
+//  function odd(ev){
+//   return ev%2!==0
+// }
+
+
+// reduce method is slight diffent it accept two argument  insted of caliing outside fuction use arrow 
+// let n=[2,3,1]
+// let new1=n.reduce((res,cur)=>{
+// return res+cur
+// } )
+// let new2=n.reduce((res,cur)=>{
+//   return Math.max(res,cur) 
+//   } )
+//   console.log(new2)
+// console.log(new1)
+
+// let f=[6,7]
+// let m=Math.max(...f)
+// console.log(m)
+// objects 
+// this = reference to the object where THIS lom.name=this.name
+// const lom={
+//   name:'lode',
+//   id:1,
+//   helo:()=>{console.log("hey you can call functio isid e objects")},
+//   // THIS wont work for arrow function use normal function
+//   hayya:()=>{console.log(`hey ${this.name} has id of ${this.id}`)}  ,
+//   hayya:function(){console.log(`hey ${this.name} has id of ${this.id}`)}  
+
+
+// }
+// // console.log(lom.helo())
+// // or
+
+// lom.helo()
+// lom.hayya()
+
+
+// destructing = extract values from array and objects,then assaign them to variables in a convienient way
+// [] to perform array destrucr ing
+// {} to perform objects destrucrting
+// let a=[1,3]
+// const[f1,f2]=a
+// console.log(a)
+// const b=[a[0],a[1]=9]
+// const b= [a[0],a[1]]=[a[1],a[0]]
+//  console.log(b)
+
+const list={
+  name:"chheeeeeeeeeeeeeeeec",
+  id:1,
+}
+// list.name="eggggggggggg"
+// let neww= list.name          // 1st method
+// console.log(neww)
+
+// 2nd method
+// const{name,id=2,job="jccj"}=list
+// console.log(id)
+
+// function
+// function neww({name,id}){
+//   console.log(name="hhhhhhhhhhhhhh")
+//   console.log(id)
+// }
+// neww(list)
+
+//  shuffle the array
+//  let a=[6,3,9,8,2,'a']   // 1st method
+// a.sort(()=>Math.random()-0.5)
+// console.log(a)
+
+// snchronous= execute line by line consecutively in sequential manner 
+//              code that wait for operation to compleete
+// asynchronous= allows multiple operation to be performed concurrrently without waiting 
+// doesnt block the execution flow and allow progaram to continue
+// (i/o operation,fetching data) handled with async/await
+
+// try{}=Enclose the code the might cause error
+// catth{error}=catch and handle any throw error from try{} console.error(error)
+// finally{}=optional always executes used to close or clesn up ex:-closefile
+
+// try{
+//   console.log(x)
+// }
+// catch(error){
+//   console.error(error)
+// }
+// finally{
+//   console.log("this is always executes ")
+// }
+
+// let a=setTimeout(()=>{console.log("hheh")},3000)
+// clearTimeout(a)
+// Date(year,month,day,hour,minute,second ,ms)
+// let a= new Date(2023,8,1,9,2,60,3000)
+// console.log(a)
+// //  can also pass string
+// let b= new Date("2024-09-01T12:00:00Z") // 01 is date T is time 12:00 00Zreprest utc time
+// console.log(b)
+
+// const a=new Date()
+// const year=a.getFullYear()
+// const month=a.getMonth()
+// const date=a.getDate()
+// const hour =a.getHours()
+// const min=a.getMinutes()
+// const sec=a.getSeconds()
+// const day=a.getDay()
+
+
+// const formattedDate = `${year}-${month}-${date}-${hour}:${min}:${sec} ${day}`;
+
+// console.log(formattedDate); 
+// console.log(date)
+
+// console.log(month)
+// console.log(year)
+
+
